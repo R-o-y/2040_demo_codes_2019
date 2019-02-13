@@ -1,6 +1,6 @@
 package src;
 
-import java.util.Stack;
+import java.util.*;
 
 public class LispEvaluator {
     private static double performOp(Stack<Double> operands, char operator) {
@@ -54,7 +54,7 @@ public class LispEvaluator {
     }
 
     public static void main(String[] args) {
-        System.out.println(evaluate("( + -6.0 ( * 2.0 3.0 4.0 ) )"));
+        System.out.println(evaluate("( + ( - 1 7 ) ( * 2.0 ( + 1 2 ) 4.0 ) )"));
         System.out.println(evaluate("6"));
     }
 }
